@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/window"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BA3A3A"
+    android:verticalScrollbarPosition="right"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_to_android_supervisor"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:onClick="btnConnect"
+        android:text="@string/connect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sample_text" />
+
+    <Button
+        android:id="@+id/btnDisplayAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:onClick="btnDisplayAll"
+        android:text="@string/display_all"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sample_text" />
+
+    <Button
+        android:id="@+id/btnCountOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnHoursOn"
+        android:text="@string/hours_on"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.196"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConnect"
+        app:layout_constraintVertical_bias="0.315" />
+
+    <Button
+        android:id="@+id/btnEmulate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnEmulate"
+        android:text="@string/emulate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnListDate" />
+
+    <TextView
+        android:id="@+id/sample_text"
+        android:layout_width="361dp"
+        android:layout_height="183dp"
+        android:background="#FFFFFF"
+        android:isScrollContainer="true"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <SeekBar
+        android:id="@+id/startDate"
+        android:layout_width="144dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:max="30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sample_text" />
+
+    <SeekBar
+        android:id="@+id/endDate"
+        android:layout_width="144dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:max="30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/startDate"
+        app:layout_constraintTop_toBottomOf="@+id/sample_text" />
+
+    <CheckBox
+        android:id="@+id/monthCheck"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:buttonTint="#FFFFFF"
+        android:checked="false"
+        android:text="@string/month"
+        app:layout_constraintBottom_toTopOf="@+id/mNu"
+        app:layout_constraintEnd_toStartOf="@+id/endDate"
+        app:layout_constraintStart_toEndOf="@+id/startDate"
+        app:layout_constraintTop_toBottomOf="@+id/endDate"
+        app:layout_constraintVertical_bias="0.361" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/star_date"
+        app:layout_constraintBottom_toTopOf="@+id/btnConnect"
+        app:layout_constraintEnd_toStartOf="@+id/monthCheck"
+        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startDate"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/end_date"
+        app:layout_constraintBottom_toTopOf="@+id/btnDisplayAll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.288"
+        app:layout_constraintStart_toEndOf="@+id/monthCheck"
+        app:layout_constraintTop_toBottomOf="@+id/endDate"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <SeekBar
+        android:id="@+id/monthNumber"
+        android:layout_width="120dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="20dp"
+        android:max="12"
+        app:layout_constraintBottom_toTopOf="@+id/btnDisplayAll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monthCheck"
+        app:layout_constraintVertical_bias="0.307" />
+
+    <TextView
+        android:id="@+id/mNu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/month_number"
+        app:layout_constraintBottom_toTopOf="@+id/btnConnect"
+        app:layout_constraintEnd_toStartOf="@+id/monthNumber"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.704" />
+
+    <Button
+        android:id="@+id/btnListDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="btnListDate"
+        android:text="@string/list_by_date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnCountOn"
+        app:layout_constraintTop_toBottomOf="@+id/btnDisplayAll"
+        app:layout_constraintVertical_bias="0.315" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

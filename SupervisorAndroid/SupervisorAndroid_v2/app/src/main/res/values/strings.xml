@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SupervisorAndroid_v2</string>
+    <string name="welcome_to_android_supervisor">Welcome to Android Supervisor</string>
+    <string name="connect">Connect</string>
+    <string name="hours_on">Hours On</string>
+    <string name="display_all">Display All</string>
+    <string name="emulate">Emulate</string>
+    <string name="name">Name</string>
+    <string name="month">Month</string>
+    <string name="end_date">End Date</string>
+    <string name="star_date">Star Date</string>
+    <string name="month_number">Month Number</string>
+    <string name="list_by_date">List by date</string>
+</resources>
